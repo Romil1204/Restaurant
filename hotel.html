@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background:url("hot1.png");
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #000;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #000;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  height:30px;
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 22px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  transition:height .5s;
+  -webkit-transition:height .5s;
+  -moz-transition:height .5s;
+}
+
+.first{
+  background-image: url("pav1.jpg");
+  background-size: cover;
+  background-position:center;
+  }
+.second{
+  background-image: url("chole1.jpg");
+  background-size: cover;
+  background-position:center;
+}
+.dessert{
+  background-image: url("gulab1.jpg");
+  background-size: cover;
+  background-position:center;
+}
+.price {
+  float: right;
+}
+small{
+  opacity:0;
+}
+.show-description p{
+  height:100px;
+}
+.show-description small{
+  opacity:1;
+}
+@media(max-width:500px){
+  h1{
+    font-size:50px;
+    margin-top:20px;
+    line-height:40px;
+    }
+    h2{
+      font-size:20px;
+      margin:20px 0 30px 0;
+    }
+    div{
+      margin:20px 12px 0 12px;
+      }
+      p{
+        font-size:20px;
+        line-height:24px;
+      }
+      small{
+        font-size:16px;
+      }
+}
+</style>
+
+</head>
+
+<body>
+<h1>Romil's Restaurant</h1>
+<h2>A Dehradun City Eatery</h2>
+<div class="first show-description">
+  <p>Pav Bhaji <span class="price">&#8377 100</span><br />
+  <small>Pav bhaji is a fast food dish,consisting of a thick vegetable curry served with a soft bread roll.Pav bhaji has many variations in ingredients and garnishes, but is essentially a spiced mixture of mashed vegetables in a thick gravy, usually cooked on a flat griddle (tava) and served hot with a soft white bread roll. </small></p>
+</div>
+
+<div class="second show-description">
+  <p>Chole Bhature<span class="price">&#8377 120</span><br />
+  <small>Chhole bhature is a dish from the Punjab region in the northern part of the Indian subcontinent. This Punjabi dish is a combination of chana masala and bhatura, a fried bread made from maida flour. Chhole bhature is often eaten as a breakfast dish, sometimes accompanied with lassi.</small></p>
+</div>
+  
+<div class="dessert show-description">
+  <p>Gulab Jaamun <span class="price">&#8377 30</span><br />
+  <small>Gulab jamun is usually made up of powdered milk.Gulab jamun (also spelled gulaab jamun) is a milk-solid-based sweet moulded into balls, deep fried and dropped into simmering sugar syrup.</small></p>
+</div>
+<script>
+$('div').on('click',function(){
+  $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
